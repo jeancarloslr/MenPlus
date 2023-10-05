@@ -6,12 +6,12 @@
     <title>MenPlus</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="assets/estilos/sytleho.css">
+    <link rel="stylesheet" href="assets/estilos/ia.css">
 </head>
 <body>
     <header>
         <nav>
-
-            <p class="logo">MenPlus</p>
+            <p class="logo">Men+</p>
             <ul class="listmenu">
                 <li><a href="#">Saúde</a></li>
                 <li><a href="#">Psicologia</a></li>
@@ -21,16 +21,52 @@
             <p class="login">Sign in</p>
             <p class="login">Sign Up</p>
             <img src="#" alt="profile" id="imgProfile">
-            
+
             <span class="material-symbols-outlined" id="iconMenu">
                 menu
             </span>
         </nav>
+        <img src="assets/img/man.png" alt="" id="manhome">
+
+        <h1 id="tituhome">MEN+</h1>
+        <p id="paragrafohome">O melhor da <strong>saúde masculina</strong></p>
+       
+        <!--IA MenPLus-->
+        <div id="chat-container">
+          <button id="chat-toggle" class="chat-toggle-button">Chat</button>
+          <div class="box-questions">
+            <div class="header">
+              <p>CHAT MEN+</p>
+            </div>
+            <p id="status"></p>
+            <div id="history">
+            </div>
+            <div class="footer">
+              <input type="text" id="message-input" placeholder="Tire a sua dúvida aqui...">
+              <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+            </div>
+          </div>
+        </div>
+        <!--FINISH IA MENPLUS-->
     </header>
     <main>
+
+        <section class="PorqueUsar">
+           <h1 class="titulosections">Por que usar o MenPLus?</h1>
+           <div class="container">
+             <div class="gallery-wrapper">
+                <div class="gallery">
+                     <img src="assets/img/cardio.png" alt="cardio">
+                     <img src="assets/img/mindset.png" alt="mindset">
+                </div>
+             </div>
+           </div>
+        </section>
+        
     </main>
     <footer>
     </footer>
     <script src="index.js"></script>
+    <script src="ia.js"></script>
 </body>
 </html>
