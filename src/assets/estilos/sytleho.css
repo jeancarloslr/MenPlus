@@ -17,7 +17,7 @@
 }
 header{
     background-color: white; 
-    height: 100vh;
+    height: 95vh;
 }
 
 body{
@@ -26,6 +26,7 @@ body{
        
 }
 nav{
+    z-index: 200;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +34,7 @@ nav{
     width: 90vw;
     height: 6vh;
     background-color: #4D77FF;
-    margin: 15px auto 0px auto;
+    margin: 15px auto;
     border-radius: 10px;
     border: 2px solid #4D77FF;
     box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.10);
@@ -84,10 +85,9 @@ nav{
     color: var(--green);
 }
 
-
 .listmenu{
+  position: absolute;
     display: flex;
-    position: absolute;
     top: -0vh;
     right: 0;
     width: 60vw;
@@ -119,8 +119,15 @@ nav{
     font-size: 0.8em;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-
   }
+
+  #btnlogin:hover{
+    background-color: #45C1AB;
+    color: black;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    transition: 500ms ease-in;
+  }
+
 .listmenu.active{
     transform: translateX(0);
 }
@@ -145,6 +152,10 @@ nav{
     display: block;
     color: rgb(255, 255, 255);
     z-index: 100;
+}
+
+#iconMenu:hover{
+  cursor: pointer; 
 }
 
 /*IA*/
@@ -270,67 +281,41 @@ nav{
 
   /* finish IA */
 
-/*
+
   main{
     height: 100vh;
-  }/*
+  }
 
   /*section porque usar*/
+
+  .PorqueUsar{
+    height: 500px;
+  }
+
   .titulosections{
     font: normal 700 1.7em 'Poppins', sans-serif;
     text-align: center;
     padding: 30px;
     color: var(--blue);
   }
-
-  .carrousel-container{
+ 
+  .carousel-container {
     position: relative;
-    padding: 15px;
-    width: 90vw;
-    margin: 0 auto;
+    margin: 0 15px;
+    touch-action: pan-y;
+    width: 80vw;
   }
-
-  .gallery-wrapper{
-    overflow: auto;
-  }
-
-  .gallery{
+  .carousel {
     display: flex;
-    flex-direction: row;
     flex-flow: row nowrap;
-    padding: 20px;
-  }
-  
-  .arrow-left,
-  .arrow-right{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;  
-    color: var(--green);
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    /*background: linear-gradient(to left, transparent 0%, black 200%);*/
-  }
-  .arrow-right{
-    left: auto;
-    right: 0;
-    /*background: linear-gradient(to right, transparent 0%, black 200%);*/
-  }
-  .arrow-right:hover{
-      background-color: transparent;
+    flex-direction: row;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .arrow-left:hover{
-    background-color: transparent;
-  }
-
-  .item{
-    flex-shrink: 0;
-    transition: all 600ms ease-in-out;
-  }
+ .carousel-item{
+   flex-shrink: 0;
+ }
 
 
 
