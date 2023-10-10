@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="assets/estilos/sytleho.css">
     <link rel="stylesheet" href="assets/estilos/ia.css">
 </head>
@@ -38,17 +41,21 @@
        
         <!--IA MenPLus-->
         <div id="chat-container">
-          <button id="chat-toggle" class="chat-toggle-button">Chat</button>
+          <button id="chat-toggle" class="chat-toggle-button"><span class="material-symbols-outlined" id="chatIA">
+            forum
+            </span></button>
           <div class="box-questions">
             <div class="header">
-              <p>CHAT MEN+</p>
+              <p>MEN IA</p>
             </div>
             <p id="status"></p>
             <div id="history">
             </div>
             <div class="footer">
               <input type="text" id="message-input" placeholder="Tire a sua dúvida aqui...">
-              <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+              <button class="btn-submit" id="btn-submit" onclick="sendMessage()"><span class="material-symbols-outlined" id="icon-send">
+                send
+                </span></button>
             </div>
           </div>
         </div>
@@ -90,9 +97,15 @@
                   <img src="assets/img/run2.jpg" alt="trainning">
                   <p class="paramomento">lorem jean jean</p>
                  </div>
-               
             </div>
           </div>
+        </section>
+        <section class="Produtos-marketing">
+          <h1 class="titulosections" id="titulo-produto">PRODUTOS</h1>
+          <p class="text-produto-marketing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius placeat fugit totam, facere assumenda id soluta harum aperiam inventore ullam corrupti magnam quia deleniti libero, quidem aliquid reprehenderit veritatis ipsa!</p>
+          <button id="btn-produto-marketing">Ver produtos <span class="material-symbols-outlined">
+            arrow_right_alt
+            </span></button>
         </section>
     </main>
     <footer>
