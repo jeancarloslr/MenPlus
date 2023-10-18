@@ -96,4 +96,63 @@ carousel.addEventListener('touchmove', (e) => {
   carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 });
 
-// Função para atualizar a largura do item com base na largura da tela
+
+//reutilizando o código do carrossel para a nova seção "carousel-container-produto"
+const carouselContainerProduto = document.querySelector('.carousel-container-produto');
+const carouselProduto = carouselContainerProduto.querySelector('.carousel-produto');
+const carouselItemsProduto = carouselProduto.querySelectorAll('.item-produto');
+
+let currentIndexProduto = 0;
+let startXProduto = 0;
+let isDraggingProduto = false;
+
+carouselProduto.addEventListener('mousedown', (e) => {
+  isDraggingProduto = true;
+  startXProduto = e.clientX;
+  e.preventDefault();
+});
+
+carouselProduto.addEventListener('mousemove', (e) => {
+  if (!isDraggingProduto) return;
+  const currentXProduto = e.clientX;
+  const deltaXProduto = startXProduto - currentXProduto;
+
+  if (deltaXProduto > 10 && currentIndexProduto < carouselItemsProduto.length - 1) {
+    currentIndexProduto++;
+    isDraggingProduto = false;
+  } else if (deltaXProduto < -10 && currentIndexProduto > 0) {
+    currentIndexProduto--;
+    isDraggingProduto = false;
+  }
+
+  const itemWidthProduto = carouselItemsProduto[0].offsetWidth;
+  carouselProduto.style.transform = `translateX(-${currentIndexProduto * itemWidthProduto}px)`;
+});
+
+carouselProduto.addEventListener('mouseup', () => {
+  isDraggingProduto = false;
+});
+
+carouselProduto.addEventListener('mouseleave', () => {
+  isDraggingProduto = false;
+});
+
+carouselProduto.addEventListener('touchstart', (e) => {
+  startXProduto = e.touches[0].clientX;
+});
+
+carouselProduto.addEventListener('touchmove', (e) => {
+  const currentXProduto = e.touches[0].clientX;
+  const deltaXProduto = startXProduto - currentXProduto;
+
+  if (deltaXProduto > 50 && currentIndexProduto < carouselItemsProduto.length - 1) {
+    currentIndexProduto++;
+    startXProduto = currentXProduto;
+  } else if (deltaXProduto < -50 && currentIndexProduto > 0) {
+    currentIndexProduto--;
+    startXProduto = currentXProduto;
+  }
+
+  const itemWidthProduto = carouselItemsProduto[0].offsetWidth;
+  carouselProduto.style.transform = `translateX(-${currentIndexProduto * itemWidthProduto}px)`;
+});
