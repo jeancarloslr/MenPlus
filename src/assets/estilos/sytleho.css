@@ -571,7 +571,6 @@ nav{
 #titulo-vantagens-conta > strong{
   color: var(--green);
 }
-
 .container-vantagens{
   width: 65vw;
   height: 115vh;
@@ -581,8 +580,8 @@ nav{
   gap: 30px;
 
 }
-
 .item-vantagem{
+  position: relative;
   width: 100%;
   height: 45vh;
   background-color: white;
@@ -590,30 +589,33 @@ nav{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   border-radius: 12px;
-}
 
+}
 #icons-vantagens{
    font-size: 12vw;
    color: var(--blue);
-   padding: 15px 0 10px 0;
+   position: absolute;
+   top: 10px;
+   padding-top: 5px;
+   color: var(--blue);
    
 }
-
 .titulo-itens{
- font: normal bold 1em 'Poppins', sans-serif;
+ position: absolute;
+ top: 80px;
+ font: normal bold 0.9em 'Poppins', sans-serif;
  color: black;
 
 }
-
 .content-itens{
+  position: absolute;
+  top: 120px;
   font: normal lighter 0.8rem 'Manrope', sans-serif;
   color: black;
   text-align: center;
   font-size: 0.8em;
   padding: 0px 20px;
-
 }
 
 .login { display: none; }
