@@ -156,3 +156,15 @@ carouselProduto.addEventListener('touchmove', (e) => {
   const itemWidthProduto = carouselItemsProduto[0].offsetWidth;
   carouselProduto.style.transform = `translateX(-${currentIndexProduto * itemWidthProduto}px)`;
 });
+
+
+/*PERGUNTAS FREQUENTES*/ 
+const faqs = document.querySelectorAll('.frequentes-container');
+
+faqs.forEach(faq => {
+  const question = faq.querySelector('.question');
+  question.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
+

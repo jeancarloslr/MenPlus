@@ -610,12 +610,92 @@ nav{
 }
 .content-itens{
   position: absolute;
-  top: 120px;
+  top: 110px;
   font: normal lighter 0.8rem 'Manrope', sans-serif;
   color: black;
   text-align: center;
   font-size: 0.8em;
   padding: 0px 20px;
+}
+
+
+/*Responsividade cellphones 600px till 712px.*/
+@media (min-width: 600px) and (max-width: 712px){
+  .titulo-itens{
+    top: 95px;
+    font-size: 1.1em;
+  }
+
+  .content-itens{
+    top: 130px;
+    font-size: 0.9em;
+  }
+}
+/*Nossos médicos*/
+.medicos{
+  height: 120vh;
+  background-color: white;
+}
+#titulo-medicos{
+  padding: 17px 0px;
+}
+.paragrafo-medicos{
+  text-align: center;
+  padding: 0px 30px;
+  font: normal 500 1em 'Manrope', sans-serif;
+}
+
+
+
+
+
+
+/*Perguntas Frequentes*/
+.perguntas-frequentes{
+  height: 90vh;
+}
+
+.frequentes-container{
+  width: 80vw;
+  height: 75vh;
+  margin: auto;
+}
+
+.frequentes-titulos{
+  font: normal 600 1.1em 'Poppins', sans-serif;
+}
+
+.question{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#icons-frequentes{
+  font-size: 30px;
+}
+
+.line-frequentes{
+  background-color: var(--blue);
+  opacity: 50%;
+  height: 1px;
+  border: none;
+}
+
+.answer{
+  padding-top: 5px;
+  margin-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.answer-frequentes{
+  font: normal 500 0.9em 'Manrope', sans-serif;
+  line-height: 1.3;
+}
+
+.frequentes-container.active .answer{
+  max-height: 200px;
 }
 
 .login { display: none; }
