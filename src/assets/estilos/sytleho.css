@@ -651,14 +651,20 @@ nav{
 
 
 /*Perguntas Frequentes*/
-.perguntas-frequentes{
-  height: 90vh;
-}
 
-.frequentes-container{
+#titulo-faq{
+  padding-bottom: 45px;
+}
+.perguntas-frequentes{
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   width: 80vw;
-  height: 75vh;
   margin: auto;
+  padding: 20px;
 }
 
 .frequentes-titulos{
@@ -673,29 +679,50 @@ nav{
 
 #icons-frequentes{
   font-size: 30px;
+  color: var(--blue);
 }
 
-.line-frequentes{
+.line-faq{
   background-color: var(--blue);
   opacity: 50%;
   height: 1px;
   border: none;
+  margin-bottom: 7px;
 }
 
 .answer{
-  padding-top: 5px;
+  padding-top: 2px;
   margin-bottom: 10px;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 500ms ease;
 }
 
-.answer-frequentes{
+.answer p {
   font: normal 500 0.9em 'Manrope', sans-serif;
-  line-height: 1.3;
 }
 
-.frequentes-container.active .answer{
+.faq.active .answer{
   max-height: 200px;
+  animation: fade 500ms ease-in-out;
+}
+
+.faq.active #icons-frequentes{
+  transform: rotate(180deg);
+}
+
+#icons-frequentes{
+  transition: transform 0.3s ease-in;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(-10px)
+  }to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .login { display: none; }

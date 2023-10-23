@@ -158,13 +158,12 @@ carouselProduto.addEventListener('touchmove', (e) => {
 });
 
 
-/*PERGUNTAS FREQUENTES*/ 
-const faqs = document.querySelectorAll('.frequentes-container');
+/*FAQ*/ 
+const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
-  const question = faq.querySelector('.question');
-  question.addEventListener("click", () => {
+  faq.addEventListener("click", () => {
     faq.classList.toggle("active");
-  });
-});
+  })
+})
 
