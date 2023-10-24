@@ -559,7 +559,7 @@ nav{
 
 /*vantagens-conta*/
 .vantagens-conta{
-  height: 138vh;
+  height: 132vh;
   background-color: var(--grey);
 }
 
@@ -573,17 +573,17 @@ nav{
 }
 .container-vantagens{
   width: 65vw;
-  height: 115vh;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 
 }
 .item-vantagem{
   position: relative;
   width: 100%;
-  height: 45vh;
+  height: 30vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -611,7 +611,7 @@ nav{
 .content-itens{
   position: absolute;
   top: 110px;
-  font: normal lighter 0.8rem 'Manrope', sans-serif;
+  font: normal lighter 0.9rem 'Manrope', sans-serif;
   color: black;
   text-align: center;
   font-size: 0.8em;
@@ -633,11 +633,11 @@ nav{
 }
 /*Nossos médicos*/
 .medicos{
-  height: 120vh;
+  height: 75vh;
   background-color: white;
 }
 #titulo-medicos{
-  padding: 17px 0px;
+  padding: 30px 0px;
 }
 .paragrafo-medicos{
   text-align: center;
@@ -645,13 +645,46 @@ nav{
   font: normal 500 1em 'Manrope', sans-serif;
 }
 
+.medico-container{
+  height: 90vh;
+  width: 85vw;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
 
+.medico-item{
+  width: 60vw;
+  height: 30vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5959ff;
+  border-radius: 12px;
+}
 
+#medico-1{
+  background-image: url('../img/medicaW.png');
+}
 
+#medico-2{
+  background-image: url('../img/medicoM.png');
+}
+
+#medico-3{
+  background-image: url('../img/medicoWS.jpg');
+}
+
+.content-medicos{
+  padding: 15px 0 35px 0;
+  font: lighter 1em 'Manrope', sans-serif;
+}
 
 
 /*Perguntas Frequentes*/
-
 #titulo-faq{
   padding-bottom: 45px;
 }
@@ -668,7 +701,7 @@ nav{
 }
 
 .frequentes-titulos{
-  font: normal 600 1.1em 'Poppins', sans-serif;
+  font: normal 500 1.1em 'Poppins', sans-serif;
 }
 
 .question{
@@ -723,6 +756,11 @@ nav{
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+footer{
+  height: 70vh;
+  background-color: var(--grey);
 }
 
 .login { display: none; }
