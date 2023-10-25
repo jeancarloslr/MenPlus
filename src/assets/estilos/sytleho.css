@@ -100,8 +100,8 @@ nav{
     font-size: 1.5em;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 100px;
-    align-items: start;
     padding-left: 50px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
@@ -312,10 +312,6 @@ nav{
 
   /* finish IA */
 
-
-  main{
-    height: 100vh;
-  }
 
   /*section porque usar*/
 
@@ -759,9 +755,70 @@ nav{
 }
 
 footer{
+  padding: 35px;
   height: 70vh;
   background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
 }
+.titulos-footer{
+  font: normal 700 1.2em 'Poppins', sans-serif;
+  color: white;
+  padding-bottom: 1px;
+}
+
+.content-footer{
+  font: normal 500 1em 'Manrope', sans-serif;
+  color: white;
+  padding-top: 3px;
+}
+
+.line-footer{
+  background-color: var(--blue);
+  opacity: 50%;
+  height: 1px;
+  border: none;
+}
+
+#btn-footer{
+    width: 30vw;
+    height: 4vh;
+    background-color: rgb(57, 56, 56);
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#btn-footer:hover{
+  background-color: #25D366;
+  color: black;
+  transition-duration: 500ms;
+}
+
+.icons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 18px;
+}
+.icons-footer{
+  color: var(--green);
+  padding-top: 17px;
+  cursor: pointer;
+}
+
+
+
+
+
 
 .login { display: none; }
 #imgProfile { display: none; }
