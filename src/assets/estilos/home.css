@@ -451,7 +451,7 @@ nav{
 
 /*produtos mais vendidos*/
 .produtos-carousel{
-  height: 64vh;
+  height: 70vh;
   background-color: #FFFEFF;;
 }
 
@@ -683,14 +683,14 @@ nav{
   padding-bottom: 45px;
 }
 .perguntas-frequentes{
-  height: 110vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   width: 80vw;
-  margin: auto;
+  margin: 130px auto 0px auto;
   padding: 20px;
 }
 
@@ -813,8 +813,74 @@ footer{
   cursor: pointer;
 }
 
+@media (min-width: 375px) and (max-width: 390px){
 
+  #paragrafohome{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    font:  bold 3.3em 'Poppins', sans-serif;
+    font: normal 600 2em 'Poppins', sans-serif;
+}
 
+.produtos-carousel{
+  height: 80vh;
+  background-color: #FFFEFF;;
+}
+
+.produto-mais-vendidos{
+  position: absolute;
+  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
+  width: 47vw;  
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+}
+
+.vantagens-conta{
+  height: 168vh;
+  background-color: var(--grey);
+}
+
+.container-vantagens{
+  width: 65vw;
+  height: 150vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.item-vantagem{
+  position: relative;
+  width: 100%;
+  height: 27vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+
+}
+
+.perguntas-frequentes{
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 80vw;
+  margin: 200px auto 0px auto;
+  padding: 20px;
+}
+
+footer{
+  height: 71vh;
+}
+}
 
 /*RESPONSIVIDADE TABLETS*/
 @media (min-width: 768px) and (max-width: 1024px){
