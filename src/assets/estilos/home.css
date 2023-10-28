@@ -53,19 +53,6 @@ nav{
     width: 70%;
   }
 
-.chatIA-circle{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 54px;
-   height: 54px;
-   border-radius: 50%;
-   background-color: #4D77FF;
-   position: fixed;
-   bottom: topvh;
-   right: 3;
-
-}
 
 #tituhome{
     position: absolute;
@@ -157,23 +144,24 @@ nav{
     z-index: 100;
 }
 
-#iconMenu:hover{
-  cursor: pointer; 
+#iconMenu.active{
+  color: var(--blue);
 }
+
 
 /*IA*/
 .chat-toggle-button {
     position: fixed;
     bottom: 17px;
     right: 17px;
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     border-radius: 100%;
     background-color: var(--blue);
     color: #f7f7f7;
     border: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 110;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -528,7 +516,12 @@ nav{
     font-size: 0.9em;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    padding: 20;
+    padding: 10px;
+}
+
+.btn-produto:hover{
+  background-color: #50d9c0;
+
 }
 
 /*cellphones 600px responsives.*/
@@ -681,16 +674,17 @@ nav{
 /*Perguntas Frequentes*/
 #titulo-faq{
   padding-bottom: 45px;
+  
 }
 .perguntas-frequentes{
-  height: 85vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   width: 80vw;
-  margin: 130px auto 0px auto;
+  margin: 190px auto 0px auto;
   padding: 20px;
 }
 
@@ -866,14 +860,14 @@ footer{
 }
 
 .perguntas-frequentes{
-  height: 85vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   width: 80vw;
-  margin: 200px auto 0px auto;
+  margin: 100px auto 0px auto;
   padding: 20px;
 }
 

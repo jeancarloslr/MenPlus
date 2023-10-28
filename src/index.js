@@ -1,34 +1,34 @@
 class MobileNavbar {
-    constructor(iconMenu, listmenu, navLinks) {
-        this.menu = document.querySelector(iconMenu);
-        this.navList = document.querySelector(listmenu);
-        this.navLinks = document.querySelectorAll(navLinks);
-        this.activeClass = "active";
+  constructor(iconMenu, listmenu, navLinks) {
+      this.menu = document.querySelector(iconMenu);
+      this.navList = document.querySelector(listmenu);
+      this.navLinks = document.querySelectorAll(navLinks);
+      this.activeClass = "active";
 
-        this.handleClick = this.handleClick.bind(this); // Correção aqui
-    }
+      this.handleClick = this.handleClick.bind(this);
+  }
 
-    handleClick() {
-        console.log(this);
-        this.navList.classList.toggle(this.activeClass);
-    }
+  handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.menu.classList.toggle(this.activeClass); // Adicione esta linha para alternar a classe no botão
+  }
 
-    addClickEvent() {
-        this.menu.addEventListener("click", this.handleClick);
-    }
+  addClickEvent() {
+      this.menu.addEventListener("click", this.handleClick);
+  }
 
-    init() {
-        if (this.menu) {
-            this.addClickEvent();
-        }
-        return this;
-    }
+  init() {
+      if (this.menu) {
+          this.addClickEvent();
+      }
+      return this;
+  }
 }
 
 const mobileNavbar = new MobileNavbar(
-    ".material-symbols-outlined",
-    ".listmenu",
-    ".listmenu li"
+  ".material-symbols-outlined",
+  ".listmenu",
+  ".listmenu li"
 );
 
 mobileNavbar.init();
