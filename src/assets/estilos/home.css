@@ -905,5 +905,108 @@ footer{
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+@media (min-height: 500px) and (max-height: 600px){
+  
+
+  nav{
+    height: 5vh;
+    width: 85vw;
+    padding: 7px;
+    left: 5vw;
+    right: 5vw;
+    top: 1.7%;
+  }
+
+  .img-manhome{
+    position: relative;
+    height: 320px;
+    width: 320px;
+    top: 130px;
+    
+  }
+
+  #manhome{
+    position: absolute;
+  }
+
+  #tituhome{
+    top: 330px;
+    font-size: 2.5em;
+  }
+
+  #paragrafohome{
+    line-height: 40px;
+    top: 380px;
+  }
+
+  .Assuntos-momento{
+    height: 90vh;
+  }
+
+  .PorqueUsar{
+    height: 87vh;
+  }
+
+  .carousel{
+    width: 80vw;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel-item{
+    width: 250px;
+    height: 250px;
+  }
+
+
+  /*PRODUTOS*/
+
+  .Produtos-marketing{
+    height: 70vh;
+  }
+  .img-whey-produto{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: -40px;
+    
+  }
+
+  #whey-produto{
+    position: absolute;
+  }
+
+  /*PRODUTOS MAIS VENDIDOS*/
+  .produtos-carousel{
+    height: 80vh;
+  }
+
+  .img-mais-vendido{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    top: 65px;
+    left: 5%;
+  }
+
+  .produto-mais-vendidos{
+    position: absolute;
+  }
+  
+}
+
+
 .login { display: none; }
 #imgProfile { display: none; }
