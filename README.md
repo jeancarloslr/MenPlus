@@ -1,7 +1,7 @@
 
 # MenPlus
 
-MenPlus é um projeto que ajuda HOMBRES DO SEXO MASCULINO a crescer.
+MenPlus é um projeto que ajuda homens a crescer.
 
 
 ## Screenshots
