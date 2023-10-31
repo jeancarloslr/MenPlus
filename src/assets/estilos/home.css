@@ -525,6 +525,25 @@ nav{
 
 }
 
+#produto-ver-mais{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 35px;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: transparent;
+  color:  var(--blue);
+  font: normal 600 0.9em 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+#produto-ver-mais:hover{
+  padding-left: 20px;
+  transition: 500ms;
+}
+
 /*cellphones 600px responsives.*/
 @media (min-width: 600px) and (max-width: 700px){
   .produto-mais-vendidos{
@@ -1008,7 +1027,7 @@ footer{
 
   /*PRODUTOS MAIS VENDIDOS*/
   .produtos-carousel{
-    height: 80vh;
+    height: 90vh;
   }
 
   .img-mais-vendido{
