@@ -79,11 +79,11 @@ nav{
     display: flex;
     top: 0;
     right: 0;
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.3em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -93,6 +93,7 @@ nav{
     transition: transform 0.3s ease-in;
     z-index: 5; 
     font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
 }
 
   #btnlogin{
@@ -809,6 +810,10 @@ footer{
 
 @media (min-width: 375px) and (max-width: 390px){
 
+
+  .listmenu{
+    gap: 70px;
+  }
   #paragrafohome{
     position: absolute;
     top: 75%;
@@ -928,6 +933,18 @@ footer{
     top: 1.7%;
   }
 
+
+  .listmenu{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    gap: 50px;
+
+}
+
   .img-manhome{
     position: relative;
     height: 320px;
@@ -942,12 +959,13 @@ footer{
 
   #tituhome{
     top: 330px;
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
   #paragrafohome{
     line-height: 40px;
     top: 380px;
+    font-size: 1.8em;
   }
 
   .Assuntos-momento{
@@ -995,16 +1013,90 @@ footer{
 
   .img-mais-vendido{
     position: relative;
-    width: 125px;
-    height: 125px;
-    top: 65px;
-    left: 5%;
+    width: 80px;
+    height: 80px;
+    top: 100px;
+    left: 25%;
   }
 
   .produto-mais-vendidos{
     position: absolute;
   }
+
+  .info{
+    top: 88%;
+  }
+
+  .info p{
+    font-size: 0.8em;
+    padding-top: 10px;
+  }
+
+    .preco{
+      font-size: 0.8em;
+      position: absolute;
+      top: 15px;
+    }
+
+  .btn-produto{
+    margin-top: 8px;
+    padding: 10px 20px;
+    font-size: 0.7em;
+    border-radius: 8px;
+  }
+
+  .titulosections{
+    font-size: 1.5em;
+  }
+
+  /*VANTAGENS-CONTA*/
+  .vantagens-conta{
+    height: 180vh;
+
+  }
+
+  .container-vantagens{
+    height: 180vh;
+    gap: 30px;
+
+  }
+
+  .item-vantagem{
+    height: 30vh;
+   
+  }
+
+  .item-vantagem .titulo-itens{
+    top: 65px;
+  }
+
+  .item-vantagem .content-itens{
+    top: 90px;
+  }
+
+  /*medicos*/
+
+  .medicos{
+    height: 110vh;
+  }
+
+  .medico-container{
+    height: 110vh;
+  }
+
+  .medico-item{
+    width: 60vw;
+    height: 50vh;
+  }
+
+  .perguntas-frequentes{
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
   
+  footer{
+    height: 80vh;
+  }
 }
 
 
