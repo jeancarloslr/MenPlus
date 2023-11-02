@@ -1152,24 +1152,38 @@ nav{
     top: 73%;
     left: 5%;
     font: normal 600 2.4em 'Poppins', sans-serif;
-}
+  }
+
+  .PorqueUsar{
+    height: 50vh;
+  }
+  .titulosections{
+    font-size: 2em;
+    
+  }
+
+  .carousel-container{
+    width: 100vw;
+    padding: 0px 10px;
+  }
 
 .carousel{
   pointer-events: none; /*desativa função js*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap:  nowrap;
+  align-items: stretch;
+  width: 100vw;
+  gap: 20px;
 }
 
-.carousel-container{
-  width: 88vw;
-}
-
-.img-carousel-item{
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
 .carousel-item{
- position: absolute;
+/*width: 260px;
+  height: 348px;*/
+  width: 30vw;
+  height: 30vh;
 }
+
 }
 
 
