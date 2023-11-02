@@ -38,7 +38,7 @@ nav{
     width: 90vw;
     height: 6vh;
     background-color: #4D77FF;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid #4D77FF;
     box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.10);
     font-family: 'Inter', sans-serif; 
@@ -940,46 +940,6 @@ footer{
 }
 }
 
-/*RESPONSIVIDADE TABLETS*/
-@media (min-width: 768px) and (max-width: 1024px){
-
-  #manhome{
-    /*imagem responsiva*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    width: 70%;
-  }
-
-  #tituhome{
-    position: absolute;
-    top: 65%;
-    left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
-}
-
-#paragrafohome{
-    position: absolute;
-    top: 73%;
-    left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
-    font: normal 600 2em 'Poppins', sans-serif;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-height: 500px) and (max-height: 600px){
   
   nav{
@@ -1156,6 +1116,60 @@ footer{
   footer{
     height: 80vh;
   }
+}
+
+
+/*RESPONSIVIDADE TABLETS*/
+@media (min-width: 768px) and (max-width: 1024px){
+
+ .img-manhome{
+  position: relative;
+  max-width: 700px;
+  height: 700px;
+}
+
+#manhome{
+  position: absolute;
+  
+}
+
+nav{
+  font-size: 1.4em;
+}
+
+#iconMenu{
+  font-size: 50px;
+}
+ #tituhome{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font:  bold 3.3em 'Poppins', sans-serif;
+}
+
+#paragrafohome{
+    position: absolute;
+    top: 73%;
+    left: 5%;
+    font: normal 600 2.4em 'Poppins', sans-serif;
+}
+
+.carousel{
+  pointer-events: none; /*desativa função js*/
+}
+
+.carousel-container{
+  width: 88vw;
+}
+
+.img-carousel-item{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.carousel-item{
+ position: absolute;
+}
 }
 
 
