@@ -1154,19 +1154,17 @@ nav{
     font: normal 600 2.4em 'Poppins', sans-serif;
   }
 
+  /*POR QUE USAR*/
   .PorqueUsar{
     height: 50vh;
   }
   .titulosections{
-    font-size: 2em;
-    
+    font-size: 2.2em;
   }
-
   .carousel-container{
     width: 100vw;
     padding: 0px 10px;
   }
-
 .carousel{
   pointer-events: none; /*desativa função js*/
   display: flex;
@@ -1184,7 +1182,196 @@ nav{
   height: 30vh;
 }
 
+/*FINISHED POR QUE usar*/
+
+
+/*ASSUNTOS MOMENTO*/
+.Assuntos-momento{
+  height: 75vh;
 }
+#titulo-post-momento{
+  padding-bottom: 60px;
+}
+
+.content{
+  gap: 40px;
+}
+
+.paramomento{
+  font-size: 1.3em;
+}
+
+/*FINISHED ASSUNSTOS DO MOMENTO*/
+
+
+/*PRODUTOS*/
+
+.img-whey-produto{
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+#whey-produto{
+  position: absolute;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.content-produtos{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-produtos h1{
+  font-size: 2.2em;
+}
+
+.content-produtos p{
+  font-size: 1.3em;
+}
+
+.btn-produto-marketing{
+  font-size: 2em;
+}
+
+/*PRODUTOS FINISHED*/
+
+/*PRODUTOS MAIS VENDIDOS*/
+
+.vantagens-conta{
+  height: 125vh;
+}
+
+#titulo-vantagens-conta{
+  padding: 50px 0px 65px 0px;
+}
+
+.produtos-carousel{
+  height: 60vh;
+}
+.item-produto{
+  width: 38vw;
+  height: 38vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-mais-vendido{
+  position: relative;
+  width: 350px;
+  height: 350px;
+  top: 18px
+}
+
+.produto-mais-vendidos{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info p{
+  font-size: 1.2em;
+}
+
+.info .btn-produto{
+  font-size: 1.2em;
+
+}
+
+#produto-ver-mais{
+  font-size: 1.3em;
+  width: 200px;
+  margin-top: 35px;
+}
+/*FINISHED PRODUTOS-MAIS-VENDIDOS*/
+
+
+/*VANTAGENS CONTA*/
+.titulo-itens{
+  font-size: 1.8em;
+  padding-top: 40px;
+}
+
+.content-itens{
+  font-size: 1.3em;
+  padding-top: 70px;
+}
+
+@media (min-width: 912px) and (max-width: 1024px) {
+  .titulo-itens{
+    padding-top: 55px;
+  }
+
+  .content-itens{
+    padding-top: 80px;
+  } 
+}
+/*VANTAGENS CONTA FINISHED*/
+
+/*NOSSOS MÉDICOS*/
+.paragrafo-medicos{
+  font-size: 1.3em;
+  width: 500px;
+  margin: auto;
+}
+
+.content-medicos{
+ font-size: 1.3em;
+ font-weight: 600;
+}
+
+/*finished/*
+
+/*FAQ*/
+.frequentes-titulos{
+  font-size: 1.7em;
+}
+
+.answer{
+  font-size: 1.5em;
+}
+
+.line-faq{
+  height: 1px;
+  opacity: 90%;
+  margin-bottom: 10px;
+}
+
+#icons-frequentes{
+  font-size: 45px;
+}
+
+/*FINISHED*/
+
+/*FOOTER*/
+footer{
+  height: 40vh;
+}
+.titulos-footer{
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.content-footer{
+  font-size: 1.3em;
+  padding-top: 10px;
+}
+
+#btn-footer{
+  font-size: 1.4em;
+}
+
+}
+
+
+
+
 
 
 .login { display: none; }
