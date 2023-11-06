@@ -16,6 +16,30 @@
     padding: 0;
     
 }
+
+.desktop-menu {
+  display: none; /* Inicialmente, o menu estará oculto em todos os dispositivos */
+  position: relative;
+}
+
+/* Defina as regras de estilo para o menu desktop, por exemplo: */
+.desktop-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-listmenu{
+  position: absolute;
+  left: 150px;
+  top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+ 
+}
 header{
     background-color: white; 
     height: 95vh;
@@ -426,7 +450,7 @@ nav{
    font: normal 600 1em 'Poppins', sans-serif;
    border: 2px solid #FFFFF6;
    color: white;
-   width: 50vw;
+   width: 200px;
    text-align: justify;
  }
 
@@ -1369,10 +1393,52 @@ footer{
 
 }
 
+@media (min-width: 1024px) and (max-width: 1440px){
+
+  nav{ display: none;}
+
+  .desktop-menu{
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: #FFF;
+    width: 100vw;
+    height: 74px;
+    top: 0px;
+    filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
+  }
+
+
+  .list-conta{
+    position: absolute;
+    left: 74%;
+    top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #btn-cadastrar{
+    padding: 0;
+    margin: 0;
+    width: 20px;    
+  }
+
+  #btnlogin{
+    width: 130px;
+    height: 30px;
+    padding: 20px;
+  }
+
+
+  #iconMenu{ display: none; }
+  .login { display: none; }
+  #imgProfile { display: block; }
+
+}
 
 
 
 
 
-.login { display: none; }
-#imgProfile { display: none; }
