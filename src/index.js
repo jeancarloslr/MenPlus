@@ -166,3 +166,13 @@ faqs.forEach(faq => {
     faq.classList.toggle("active");
   })
 })
+
+var scrollTolowBtn = document.getElementById('scrollToMedium');
+
+function scrollToBellow() {
+  console.log('a')
+  window.scrollTo({
+    top: 800,
+    behavior: 'smooth'
+    
+  })}

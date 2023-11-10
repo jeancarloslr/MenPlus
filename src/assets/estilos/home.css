@@ -1,383 +1,397 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
 
-
-:root{
-    --blue: #4D77FF;
-    --green: #45C1AB;
-    --grey: #1B1B14;
-    --black: #040403;
+:root {
+  --blue: #4d77ff;
+  --green: #45c1ab;
+  --grey: #1b1b14;
+  --black: #040403;
 }
-*{
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
 
+#scroll-icon {
+  display: none;
+  font-size: 50px;
+  position: absolute;
+  color: var(--blue);
+  top: 92%;
+  left: 50%;
+  transform: translate(-95%, -85%);
+}
+
+.scroll-to-top {.scroll-to-top {
+  position: fixed;
+  display: block;
+  transition: opacity 500ms;
+  z-index: 999;
+}
+}
 .desktop-menu {
-  display: none; /* Inicialmente, o menu estará oculto em todos os dispositivos */
+  display: none; 
   position: relative;
 }
 
-/* Defina as regras de estilo para o menu desktop, por exemplo: */
+.desktop-menu a:hover{
+  color: var(--green);
+  transition: 300ms;
+}
+
 .desktop-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.desktop-listmenu{
+.desktop-listmenu {
   position: absolute;
-  left: 160px;
+  left: 240px;
   top: 25px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 50px;
- 
 }
-header{
-    background-color: white; 
-    height: 95vh;
+header {
+  background-color: #f1f1f1;
+  height: 95vh;
 }
 
-body{
-   overflow-x: hidden;
-   width: 100vw;
+body {
+  overflow-x: hidden;
+  width: 100vw;
 }
-nav{
-    position: fixed;
-    left: 5vw;
-    right: 5vw;
-    top: 1.7%;
-    z-index: 200;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90vw;
-    height: 6vh;
-    background-color: #4D77FF;
-    border-radius: 20px;
-    border: 2px solid #4D77FF;
-    box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.10);
-    font-family: 'Inter', sans-serif; 
+
+nav {
+  position: fixed;
+  left: 5vw;
+  right: 5vw;
+  top: 1.7%;
+  z-index: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 6vh;
+  background-color: #4d77ff;
+  border-radius: 20px;
+  border: 2px solid #4d77ff;
+  box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
 }
-  
-.img-manhome{
+
+.img-manhome {
   position: relative;
   max-width: 30rem;
   height: 30rem;
   top: 23%;
   margin: auto;
-  
 }
-  #manhome{
-    /*imagem responsiva*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -85%);
-    width: 70%;
-  }
-
-
-#tituhome{
-    position: absolute;
-    top: 65%;
-    left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
+#manhome {
+  /*imagem responsiva*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+  width: 70%;
 }
 
-#paragrafohome{
-    position: absolute;
-    top: 73%;
-    left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
-    font: normal 600 2em 'Poppins', sans-serif;
+#tituhome {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  font: bold 3.3em "Poppins", sans-serif;
 }
 
-#paragrafohome strong{
-    font-weight: 700;
-    color: var(--green);
+#paragrafohome {
+  position: absolute;
+  top: 73%;
+  left: 5%;
+  font: bold 3.3em "Poppins", sans-serif;
+  font: normal 600 2em "Poppins", sans-serif;
 }
 
-.listmenu{
-    position: fixed;
-    display: flex;
-    top: 0;
-    right: 0;
-    width: 55vw;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    list-style-type: none;
-    font-size: 1.3em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    padding-left: 50px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-    z-index: 5; 
-    font-family: 'Poppins', sans-serif;
-    border-radius: 20px;
-    
-    padding-left: 10px;
+#paragrafohome strong {
+  font-weight: 700;
+  color: var(--green);
 }
 
-  #btnlogin{
-    margin: auto;
-    width: 30vw;
-    height: 5vh;
-    background-color: var(--blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    font-size: 0.8em;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    padding: 30;
-  }
+.listmenu {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 55vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  list-style-type: none;
+  font-size: 1.3em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-left: 50px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  z-index: 5;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
 
-  #btnlogin:hover{
-    background-color: #45C1AB;
-    color: black;
-    transform: scale(1.1); /* Aumenta o tamanho em 10% */
-    transition: 500ms ease-in;
-  }
+  padding-left: 10px;
+}
 
-.listmenu.active{
-    transform: translateX(0);
+#btnlogin {
+  margin: auto;
+  width: 30vw;
+  height: 5vh;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  padding: 30;
+}
+
+#btnlogin:hover {
+  background-color: #45c1ab;
+  color: black;
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
+  transition: 500ms ease-in;
+}
+
+.listmenu.active {
+  transform: translateX(0);
 }
 /*
 .listmenu li{
 
 }*/
 
-.listmenu > li > a{
-    text-decoration: none;
-    color: black;
+.listmenu > li > a {
+  text-decoration: none;
+  color: black;
 }
-.logo{
-    color: rgb(255, 255, 255);
-    padding-left: 30px;
-    font-weight: bold;
-    font-size: 1.4em;
+.logo {
+  color: rgb(255, 255, 255);
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 1.4em;
 }
-#iconMenu{
-    padding-right: 15px;
-    font-size: 1.8em;
-    display: block;
-    color: rgb(255, 255, 255);
-    z-index: 100;
+#iconMenu {
+  padding-right: 15px;
+  font-size: 1.8em;
+  display: block;
+  color: rgb(255, 255, 255);
+  z-index: 100;
 }
 
-#iconMenu.active{
+#iconMenu.active {
   color: var(--blue);
 }
 
-
 /*IA*/
 .chat-toggle-button {
-    position: fixed;
-    bottom: 17px;
-    right: 17px;
-    width: 65px;
-    height: 65px;
-    border-radius: 100%;
-    background-color: var(--blue);
-    color: #f7f7f7;
-    border: none;
-    cursor: pointer;
-    z-index: 110;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  bottom: 17px;
+  right: 17px;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-color: var(--blue);
+  color: #f7f7f7;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .chat-toggle-button:hover{
-    background-color: #1348f8;
-  }
+.chat-toggle-button:hover {
+  background-color: #1348f8;
+}
 
-  #chatIA{/*icon chat*/
-    font-size: 2.3em;
-  }
-  
-  .box-questions.show { 
-    margin-top: 0%;
-    margin-right: 0%;
-    margin-left: 0%;
-    width: 90vw;
-    height: 80vh;
-    transition: width 0.4s ease, height 0.4s ease;
-  }
-  
-  .box-questions {
-    position: fixed;
-    right: 10vh;
-    top: 9vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 0;
-    height: 0;
-    border-radius: 10px;
-    text-align: center;
-    overflow: hidden;
-    transition: width 0.4s ease, height 0.4s ease, left 0.4s ease;
-    z-index: 100;
-    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.10);
-  }
-  
-  .show {
-    right: 5vw;
-    left: 5vw;
-  }
-  
-  .header {
-    background-color: var(--green);
-    padding: 10px;
-    color: #FFFFF6;
-    border-radius: 10px 10px 0 0;
-    font: normal 600 1.5em 'Poppins', sans-serif;
-    text-align: left;
-  }
-  
-  .footer {
-    background-color: var(--green);
-    border-radius: 0 0 10px 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    flex-shrink: 0;
-  }
-  
-  input {
-    width: 70vw;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin: 10px auto;
-    word-wrap: break-word;
-    font: normal 500 1em 'Poppins', sans-serif;
-  }
-  
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: 10vw;
-    border: none;
-  }
-  
-  #icon-send{
-    font-size: 2.2em;
-    color: #FFFEF6;
+#chatIA {
+  /*icon chat*/
+  font-size: 2.3em;
+}
 
-  }
-  button:hover {
-    cursor: pointer;
-    transition: 0.4s;
-    background-color: #949494;
-  }
-  
-  #history {
-    padding: 1rem;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100%;
-  }
-  
-  .box-my-message {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .box-response-message {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .my-message,
-  .response-message {
-    padding: 1rem;
-    border-radius: 10px;
-    color: #fff;
-    margin: 0;
-  }
-  
-  .my-message {
-    text-align: right;
-    background-color: #5959ff;
-    font: normal 500 0.9em 'Poppins', sans-serif;
-  }
-  
-  .response-message {
-    text-align: left;
-    background-color: #808080;
-    font: normal 500 0.9em 'Poppins', sans-serif;
-  }
+.box-questions.show {
+  margin-top: 0%;
+  margin-right: 0%;
+  margin-left: 0%;
+  width: 90vw;
+  height: 80vh;
+  transition: width 0.4s ease, height 0.4s ease;
+}
 
-  /* finish IA */
+.box-questions {
+  position: fixed;
+  right: 10vh;
+  top: 9vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: width 0.4s ease, height 0.4s ease, left 0.4s ease;
+  z-index: 100;
+  box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.1);
+}
 
+.show {
+  right: 5vw;
+  left: 5vw;
+}
 
-  /*section porque usar*/
+.header {
+  background-color: var(--green);
+  padding: 10px;
+  color: #fffff6;
+  border-radius: 10px 10px 0 0;
+  font: normal 600 1.5em "Poppins", sans-serif;
+  text-align: left;
+}
 
-  .PorqueUsar{
-    height: 560px;
-  }
+.footer {
+  background-color: var(--green);
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-shrink: 0;
+}
 
-  .titulosections{
-    font: normal 700 1.7em 'Poppins', sans-serif;
-    text-align: center;
-    padding: 30px;
-    color: var(--blue);
-  }
- 
-  .carousel-container {
-    position: relative;
-    margin: 0 15px;
-    touch-action: pan-y;
-    width: 90vw;
-    overflow-x: hidden;
-  }
-  .carousel {
-    display: flex;
-    flex-flow: row nowrap;
-    flex-direction: row;
-    gap: 0px;
-    transition: transform 0.3s ease-in-out;
-  }
+input {
+  width: 70vw;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 10px auto;
+  word-wrap: break-word;
+  font: normal 500 1em "Poppins", sans-serif;
+}
 
- .carousel-item{
-   flex-shrink: 0;
- }
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 10vw;
+  border: none;
+}
 
- /*finish por que usar*/
+#icon-send {
+  font-size: 2.2em;
+  color: #fffef6;
+}
+button:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #949494;
+}
 
+#history {
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
 
- /* Posts do momento*/
- .Assuntos-momento{
-   height: 70vh;
-   background-color: var(--grey);
-   padding-bottom: 10vh;
- }
+.box-my-message {
+  display: flex;
+  justify-content: flex-end;
+}
 
- .content{
+.box-response-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.my-message,
+.response-message {
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  margin: 0;
+}
+
+.my-message {
+  text-align: right;
+  background-color: #5959ff;
+  font: normal 500 0.9em "Poppins", sans-serif;
+}
+
+.response-message {
+  text-align: left;
+  background-color: #808080;
+  font: normal 500 0.9em "Poppins", sans-serif;
+}
+
+/* finish IA */
+
+/*section porque usar*/
+
+.PorqueUsar {
+  height: 560px;
+}
+
+.titulosections {
+  font: normal 700 1.7em "Poppins", sans-serif;
+  text-align: center;
+  padding: 30px;
+  color: var(--blue);
+}
+
+.carousel-container {
+  position: relative;
+  margin: 0 15px;
+  touch-action: pan-y;
+  width: 90vw;
+  overflow-x: hidden;
+}
+.carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row;
+  gap: 0px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+}
+
+/*finish por que usar*/
+
+/* Posts do momento*/
+.Assuntos-momento {
+  height: 70vh;
+  background-color: var(--grey);
+  padding-bottom: 10vh;
+}
+
+.content {
   width: 100vw;
   height: 50vh;
   display: flex;
@@ -388,106 +402,102 @@ nav{
   align-items: center;
   margin: auto;
   margin: 0;
-  
- }
+}
 
- .content-2 img{
-    border-radius: 12px;
-    flex-grow: 1;
-    width: 40vw;
- }
+.content-2 img {
+  border-radius: 12px;
+  flex-grow: 1;
+  width: 40vw;
+}
 
- #titulo-post-momento{
+#titulo-post-momento {
   color: white;
- }
+}
 
- .paramomento{
-  
-  font: lighter 1.1em 'Manrope', sans-serif;
+.paramomento {
+  font: lighter 1.1em "Manrope", sans-serif;
   color: white;
-  
- }
+}
 
- /*end posts-momento*/
+/*end posts-momento*/
 
- /*Produtos-marketing(section)*/
- .Produtos-marketing{
+/*Produtos-marketing(section)*/
+.Produtos-marketing {
   position: relative;
   height: 70vh;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   justify-content: start;
   align-items: start;
   gap: 1px;
   background-color: var(--green);
- }
+}
 
- #titulo-produto{
+#titulo-produto {
   padding: 25px 20px 7px 20px;
   margin: 0;
-  font: normal 700 2em 'Manrope', sans-serif;
-  color: #FFFFF6; 
+  font: normal 700 2em "Manrope", sans-serif;
+  color: #fffff6;
   letter-spacing: 1px;
   text-align: left;
- }
+}
 
- .text-produto-marketing{  
+.text-produto-marketing {
   padding: 0px 20px 20px 20px;
   width: 85vw;
-  font: normal 500 1em 'Poppins', sans-serif;
-  color: #FFFEF6;
+  font: normal 500 1em "Poppins", sans-serif;
+  color: #fffef6;
   letter-spacing: 0.2px;
   text-align: left;
- }
+}
 
- #btn-produto-marketing{
-   margin: 0px 20px 80px 20px;
-   padding: 10px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: transparent;
-   font: normal 600 1em 'Poppins', sans-serif;
-   border: 2px solid #FFFFF6;
-   color: white;
-   width: 200px;
-   text-align: justify;
- }
+#btn-produto-marketing {
+  margin: 0px 20px 80px 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font: normal 600 1em "Poppins", sans-serif;
+  border: 2px solid #fffff6;
+  color: white;
+  width: 200px;
+  text-align: justify;
+}
 
- #btn-produto-marketing:hover{
+#btn-produto-marketing:hover {
   background-color: var(--blue);
   border: none;
   transition: 0.3s ease-in;
 }
 
-.img-whey-produto{
+.img-whey-produto {
   position: relative;
   width: 300px;
   height: 300px;
   top: 2%;
 }
 
-#whey-produto{
+#whey-produto {
   width: 300px;
   height: 300px;
   position: absolute;
   padding-bottom: 0px;
-  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
+  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.1));
 }
-
 
 /*produtos mais vendidos*/
-.produtos-carousel{
+.produtos-carousel {
   height: 75vh;
-  background-color: #FFFEFF;;
+  background-color: #fffeff;
 }
 
-#titulo-carousel-produto{
+#titulo-carousel-produto {
   padding: 40px 30px;
   text-align: center;
 }
 
-.carousel-container-produto{
+.carousel-container-produto {
   padding-top: 10px;
   width: 90vw;
   overflow-x: hidden;
@@ -496,7 +506,7 @@ nav{
   touch-action: pan-y;
 }
 
-.carousel-produto{
+.carousel-produto {
   display: flex;
   flex-flow: row nowrap;
   flex-direction: row;
@@ -504,19 +514,19 @@ nav{
   transition: transform 0.3s ease-in-out;
 }
 
-.item-produto{
+.item-produto {
   position: relative;
   width: 53vw;
   height: 40vh;
   border-radius: 10px;
-  box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.1);
   padding: 0;
   margin: 0;
   flex-shrink: 0;
-  border: solid 2px var(--blue)
+  border: solid 2px var(--blue);
 }
 
-.info{
+.info {
   position: absolute;
   height: 25%;
   top: 34vh;
@@ -524,43 +534,42 @@ nav{
   transform: translate(-50%, -85%);
 }
 
-.info p{
-  font: normal bolder 0.9em 'Manrope', sans-serif;
+.info p {
+  font: normal bolder 0.9em "Manrope", sans-serif;
 }
-.info .preco{
+.info .preco {
   color: red;
 }
-.produto-mais-vendidos{
+.produto-mais-vendidos {
   position: absolute;
-  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
-  width: 55vw;  
+  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.1));
+  width: 55vw;
   top: 57%;
   left: 50%;
   transform: translate(-50%, -85%);
 }
-.btn-produto{
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    margin: auto;
-    width: 22vw;
-    height: 4vh;
-    background-color: var(--green);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    font-size: 0.9em;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    padding: 10px;
+.btn-produto {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  margin: auto;
+  width: 22vw;
+  height: 4vh;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  padding: 10px;
 }
 
-.btn-produto:hover{
+.btn-produto:hover {
   background-color: #50d9c0;
-
 }
 /*
 .img-mais-vendido{
@@ -574,7 +583,7 @@ nav{
 position: absolute;
 }
 */
-#produto-ver-mais{
+#produto-ver-mais {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,68 +592,65 @@ position: absolute;
   border-radius: 12px;
   padding: 5px;
   background-color: transparent;
-  color:  var(--blue);
-  font: normal 600 0.9em 'Poppins', sans-serif;
+  color: var(--blue);
+  font: normal 600 0.9em "Poppins", sans-serif;
   margin-top: 20px;
 }
 
-#produto-ver-mais:hover{
+#produto-ver-mais:hover {
   padding-left: 20px;
   transition: 500ms;
 }
 
 /*cellphones 600px responsives.*/
-@media (min-width: 600px) and (max-width: 700px){
-
-  .img-mais-vendido{
+@media (min-width: 600px) and (max-width: 700px) {
+  .img-mais-vendido {
     position: relative;
     max-width: 300px;
     height: 300px;
     top: 20%;
     margin: auto;
-
   }
-  .produto-mais-vendidos{
+  .produto-mais-vendidos {
     position: absolute;
     width: 300px;
     height: 300px;
   }
 
-  .info{
+  .info {
     top: 90%;
     font-size: 1.1em;
   }
 
-  .btn-produto{
+  .btn-produto {
     top: 77%;
   }
 }
 /* FINISHED 600px responsive*/
 
 /*vantagens-conta*/
-.vantagens-conta{
+.vantagens-conta {
   height: 132vh;
   background-color: var(--grey);
 }
 
-#titulo-vantagens-conta{
+#titulo-vantagens-conta {
   color: white;
   padding: 50px;
 }
 
-#titulo-vantagens-conta > strong{
+#titulo-vantagens-conta > strong {
   color: var(--green);
 }
-.container-vantagens{
+.container-vantagens {
   width: 65vw;
   height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 50px;
-
 }
-.item-vantagem{
+.item-vantagem {
   position: relative;
   width: 100%;
   height: 30vh;
@@ -654,62 +660,58 @@ position: absolute;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-
 }
-#icons-vantagens{
-   font-size: 12vw;
-   color: var(--blue);
-   position: absolute;
-   top: 10px;
-   padding-top: 5px;
-   color: var(--blue);
-   
+#icons-vantagens {
+  font-size: 12vw;
+  color: var(--blue);
+  position: absolute;
+  top: 10px;
+  padding-top: 5px;
+  color: var(--blue);
 }
-.titulo-itens{
- position: absolute;
- top: 80px;
- font: normal bold 0.9em 'Poppins', sans-serif;
- color: black;
-
+.titulo-itens {
+  position: absolute;
+  top: 80px;
+  font: normal bold 0.9em "Poppins", sans-serif;
+  color: black;
 }
-.content-itens{
+.content-itens {
   position: absolute;
   top: 110px;
-  font: normal lighter 0.9rem 'Manrope', sans-serif;
+  font: normal lighter 0.9rem "Manrope", sans-serif;
   color: black;
   text-align: center;
   font-size: 0.8em;
   padding: 0px 20px;
 }
 
-
 /*Responsividade cellphones 600px till 712px.*/
-@media (min-width: 600px) and (max-width: 712px){
-  .titulo-itens{
+@media (min-width: 600px) and (max-width: 712px) {
+  .titulo-itens {
     top: 95px;
     font-size: 1.1em;
   }
 
-  .content-itens{
+  .content-itens {
     top: 130px;
     font-size: 0.9em;
   }
 }
 /*Nossos médicos*/
-.medicos{
+.medicos {
   height: 75vh;
   background-color: white;
 }
-#titulo-medicos{
+#titulo-medicos {
   padding: 30px 0px;
 }
-.paragrafo-medicos{
+.paragrafo-medicos {
   text-align: center;
   padding: 0px 30px;
-  font: normal 500 1em 'Manrope', sans-serif;
+  font: normal 500 1em "Manrope", sans-serif;
 }
 
-.medico-container{
+.medico-container {
   height: 90vh;
   width: 85vw;
   margin: auto;
@@ -720,7 +722,7 @@ position: absolute;
   align-items: center;
 }
 
-.medico-item{
+.medico-item {
   width: 60vw;
   height: 30vh;
   background-position: center top;
@@ -730,30 +732,28 @@ position: absolute;
   border-radius: 12px;
 }
 
-#medico-1{
-  background-image: url('../img/medicaW.png');
+#medico-1 {
+  background-image: url("../img/medicaW.png");
 }
 
-#medico-2{
-  background-image: url('../img/medicoM.png');
+#medico-2 {
+  background-image: url("../img/medicoM.png");
 }
 
-#medico-3{
-  background-image: url('../img/medicoWS.jpg');
+#medico-3 {
+  background-image: url("../img/medicoWS.jpg");
 }
 
-.content-medicos{
+.content-medicos {
   padding: 15px 0 35px 0;
-  font: lighter 1em 'Manrope', sans-serif;
+  font: lighter 1em "Manrope", sans-serif;
 }
-
 
 /*Perguntas Frequentes*/
-#titulo-faq{
+#titulo-faq {
   padding-bottom: 45px;
-  
 }
-.perguntas-frequentes{
+.perguntas-frequentes {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -765,22 +765,22 @@ position: absolute;
   padding: 20px;
 }
 
-.frequentes-titulos{
-  font: normal 500 1.1em 'Poppins', sans-serif;
+.frequentes-titulos {
+  font: normal 500 1.1em "Poppins", sans-serif;
 }
 
-.question{
+.question {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#icons-frequentes{
+#icons-frequentes {
   font-size: 30px;
   color: var(--blue);
 }
 
-.line-faq{
+.line-faq {
   background-color: var(--blue);
   opacity: 50%;
   height: 1px;
@@ -788,7 +788,7 @@ position: absolute;
   margin-bottom: 7px;
 }
 
-.answer{
+.answer {
   padding-top: 2px;
   margin-bottom: 10px;
   max-height: 0;
@@ -797,33 +797,34 @@ position: absolute;
 }
 
 .answer p {
-  font: normal 500 0.9em 'Manrope', sans-serif;
+  font: normal 500 0.9em "Manrope", sans-serif;
 }
 
-.faq.active .answer{
+.faq.active .answer {
   max-height: 200px;
   animation: fade 500ms ease-in-out;
 }
 
-.faq.active #icons-frequentes{
+.faq.active #icons-frequentes {
   transform: rotate(180deg);
 }
 
-#icons-frequentes{
+#icons-frequentes {
   transition: transform 0.3s ease-in;
 }
 
-@keyframes fade{
-  from{
+@keyframes fade {
+  from {
     opacity: 0;
-    transform: translateY(-10px)
-  }to{
+    transform: translateY(-10px);
+  }
+  to {
     opacity: 1;
     transform: translateY(0px);
   }
 }
 
-footer{
+footer {
   padding: 35px;
   height: 50vh;
   background-color: var(--grey);
@@ -833,140 +834,136 @@ footer{
   align-items: start;
   gap: 40px;
 }
-.titulos-footer{
-  font: normal 700 1.2em 'Poppins', sans-serif;
+.titulos-footer {
+  font: normal 700 1.2em "Poppins", sans-serif;
   color: white;
   padding-bottom: 1px;
 }
 
-.content-footer{
-  font: normal 500 1em 'Manrope', sans-serif;
+.content-footer {
+  font: normal 500 1em "Manrope", sans-serif;
   color: white;
   padding-top: 3px;
 }
 
-.line-footer{
+.line-footer {
   background-color: var(--blue);
   opacity: 50%;
   height: 1px;
   border: none;
 }
 
-#btn-footer{
-    width: 30vw;
-    height: 4vh;
-    background-color: rgb(57, 56, 56);
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 1em;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 5px 10px;
-    margin-top: 10px;
+#btn-footer {
+  width: 30vw;
+  height: 4vh;
+  background-color: rgb(57, 56, 56);
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin-top: 10px;
 }
 
-#btn-footer:hover{
-  background-color: #25D366;
+#btn-footer:hover {
+  background-color: #25d366;
   color: black;
   transition-duration: 500ms;
 }
 
-.icons-container{
+.icons-container {
   display: flex;
   flex-direction: row;
   justify-content: start;
   gap: 18px;
 }
-.icons-footer{
+.icons-footer {
   color: var(--green);
   padding-top: 17px;
   cursor: pointer;
 }
 
-@media (min-width: 375px) and (max-width: 390px){
-
-  .Produtos-marketing{
+@media (min-width: 375px) and (max-width: 390px) {
+  .Produtos-marketing {
     height: 100vh;
   }
 
-  .img-manhome{
+  .img-manhome {
     top: 18%;
   }
 
-  .listmenu{
+  .listmenu {
     gap: 70px;
   }
-  #paragrafohome{
+  #paragrafohome {
     position: absolute;
     top: 75%;
     left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
-    font: normal 600 2em 'Poppins', sans-serif;
+    font: bold 3.3em "Poppins", sans-serif;
+    font: normal 600 2em "Poppins", sans-serif;
+  }
+
+  .produtos-carousel {
+    height: 80vh;
+    background-color: #fffeff;
+  }
+
+  .produto-mais-vendidos {
+    position: absolute;
+    filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.1));
+    width: 47vw;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+  }
+
+  .vantagens-conta {
+    height: 168vh;
+    background-color: var(--grey);
+  }
+
+  .container-vantagens {
+    width: 65vw;
+    height: 150vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .item-vantagem {
+    position: relative;
+    width: 100%;
+    height: 27vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+  }
+
+  .perguntas-frequentes {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 80vw;
+    margin: 100px auto 0px auto;
+    padding: 20px;
+  }
+
+  footer {
+    height: 71vh;
+  }
 }
 
-.produtos-carousel{
-  height: 80vh;
-  background-color: #FFFEFF;;
-}
-
-.produto-mais-vendidos{
-  position: absolute;
-  filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
-  width: 47vw;  
-  top: 57%;
-  left: 50%;
-  transform: translate(-50%, -85%);
-}
-
-.vantagens-conta{
-  height: 168vh;
-  background-color: var(--grey);
-}
-
-.container-vantagens{
-  width: 65vw;
-  height: 150vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-}
-
-.item-vantagem{
-  position: relative;
-  width: 100%;
-  height: 27vh;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-
-}
-
-.perguntas-frequentes{
-  height: 150vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 80vw;
-  margin: 100px auto 0px auto;
-  padding: 20px;
-}
-
-footer{
-  height: 71vh;
-}
-}
-
-@media (min-height: 500px) and (max-height: 600px){
-  
-  nav{
+@media (min-height: 500px) and (max-height: 600px) {
+  nav {
     height: 5vh;
     width: 85vw;
     padding: 7px;
@@ -975,8 +972,7 @@ footer{
     top: 1.7%;
   }
 
-
-  .listmenu{
+  .listmenu {
     position: fixed;
     display: flex;
     top: 0;
@@ -984,60 +980,57 @@ footer{
     width: 50vw;
     height: 100vh;
     gap: 50px;
+  }
 
-}
-
-  .img-manhome{
+  .img-manhome {
     position: relative;
     height: 320px;
     width: 320px;
     top: 130px;
-    
   }
 
-  #manhome{
+  #manhome {
     position: absolute;
   }
 
-  #tituhome{
+  #tituhome {
     top: 330px;
     font-size: 2.3em;
   }
 
-  #paragrafohome{
+  #paragrafohome {
     line-height: 40px;
     top: 380px;
     font-size: 1.8em;
   }
 
-  .Assuntos-momento{
+  .Assuntos-momento {
     height: 90vh;
   }
 
-  .PorqueUsar{
+  .PorqueUsar {
     height: 87vh;
   }
 
-  .carousel{
+  .carousel {
     width: 80vw;
     gap: 10px;
     padding: 0;
     margin: 0;
   }
 
-  .carousel-item{
+  .carousel-item {
     width: 250px;
     height: 250px;
   }
 
-
   /*PRODUTOS*/
 
-  .Produtos-marketing{
+  .Produtos-marketing {
     height: 120vh;
     padding: 10px;
   }
-  .img-whey-produto{
+  .img-whey-produto {
     position: relative;
     width: 300px;
     height: 300px;
@@ -1045,16 +1038,16 @@ footer{
     left: 0px;
   }
 
-  #whey-produto{
+  #whey-produto {
     position: absolute;
   }
 
   /*PRODUTOS MAIS VENDIDOS*/
-  .produtos-carousel{
+  .produtos-carousel {
     height: 90vh;
   }
 
-  .img-mais-vendido{
+  .img-mais-vendido {
     position: relative;
     width: 80px;
     height: 80px;
@@ -1062,360 +1055,354 @@ footer{
     left: 25%;
   }
 
-  .produto-mais-vendidos{
+  .produto-mais-vendidos {
     position: absolute;
   }
 
-  .info{
+  .info {
     top: 88%;
   }
 
-  .info p{
+  .info p {
     font-size: 0.8em;
     padding-top: 10px;
   }
 
-    .preco{
-      font-size: 0.8em;
-      position: absolute;
-      top: 15px;
-    }
+  .preco {
+    font-size: 0.8em;
+    position: absolute;
+    top: 15px;
+  }
 
-  .btn-produto{
+  .btn-produto {
     margin-top: 8px;
     padding: 10px 20px;
     font-size: 0.7em;
     border-radius: 8px;
   }
 
-  .titulosections{
+  .titulosections {
     font-size: 1.5em;
   }
 
   /*VANTAGENS-CONTA*/
-  .vantagens-conta{
+  .vantagens-conta {
     height: 180vh;
-
   }
 
-  .container-vantagens{
+  .container-vantagens {
     height: 180vh;
     gap: 30px;
-
   }
 
-  .item-vantagem{
+  .item-vantagem {
     height: 30vh;
-   
   }
 
-  .item-vantagem .titulo-itens{
+  .item-vantagem .titulo-itens {
     top: 65px;
   }
 
-  .item-vantagem .content-itens{
+  .item-vantagem .content-itens {
     top: 90px;
   }
 
   /*medicos*/
 
-  .medicos{
+  .medicos {
     height: 110vh;
   }
 
-  .medico-container{
+  .medico-container {
     height: 110vh;
   }
 
-  .medico-item{
+  .medico-item {
     width: 60vw;
     height: 50vh;
   }
 
-  .perguntas-frequentes{
+  .perguntas-frequentes {
     padding-top: 100px;
     padding-bottom: 120px;
   }
-  
-  footer{
+
+  footer {
     height: 80vh;
   }
 }
 
-
 /*RESPONSIVIDADE TABLETS*/
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
+  .img-manhome {
+    position: relative;
+    max-width: 700px;
+    height: 700px;
+  }
 
- .img-manhome{
-  position: relative;
-  max-width: 700px;
-  height: 700px;
-}
+  #manhome {
+    position: absolute;
+  }
 
-#manhome{
-  position: absolute;
-  
-}
+  nav {
+    font-size: 1.4em;
+  }
 
-nav{
-  font-size: 1.4em;
-}
-
-#iconMenu{
-  font-size: 50px;
-}
- #tituhome{
+  #iconMenu {
+    font-size: 50px;
+  }
+  #tituhome {
     position: absolute;
     top: 65%;
     left: 5%;
-    font:  bold 3.3em 'Poppins', sans-serif;
-}
+    font: bold 3.3em "Poppins", sans-serif;
+  }
 
-#paragrafohome{
+  #paragrafohome {
     position: absolute;
     top: 73%;
     left: 5%;
-    font: normal 600 2.4em 'Poppins', sans-serif;
+    font: normal 600 2.4em "Poppins", sans-serif;
   }
 
   /*POR QUE USAR*/
-  .PorqueUsar{
+  .PorqueUsar {
     height: 50vh;
   }
-  .titulosections{
+  .titulosections {
     font-size: 2.2em;
   }
-  .carousel-container{
+  .carousel-container {
     width: 100vw;
     padding: 0px 10px;
   }
-.carousel{
-  pointer-events: none; /*desativa função js*/
-  display: flex;
-  flex-direction: row;
-  flex-wrap:  nowrap;
-  align-items: stretch;
-  width: 100vw;
-  gap: 20px;
-}
-
-.carousel-item{
-/*width: 260px;
-  height: 348px;*/
-  width: 30vw;
-  height: 30vh;
-}
-
-/*FINISHED POR QUE usar*/
-
-
-/*ASSUNTOS MOMENTO*/
-.Assuntos-momento{
-  height: 75vh;
-}
-#titulo-post-momento{
-  padding-bottom: 60px;
-}
-
-.content{
-  gap: 40px;
-}
-
-.paramomento{
-  font-size: 1.3em;
-}
-
-/*FINISHED ASSUNSTOS DO MOMENTO*/
-
-
-/*PRODUTOS*/
-
-.img-whey-produto{
-  position: relative;
-  width: 500px;
-  height: 500px;
-}
-
-#whey-produto{
-  position: absolute;
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-}
-
-.content-produtos{
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.content-produtos h1{
-  font-size: 2.2em;
-}
-
-.content-produtos p{
-  font-size: 1.3em;
-}
-
-.btn-produto-marketing{
-  font-size: 2em;
-}
-
-/*PRODUTOS FINISHED*/
-
-/*PRODUTOS MAIS VENDIDOS*/
-
-.vantagens-conta{
-  height: 125vh;
-}
-
-#titulo-vantagens-conta{
-  padding: 50px 0px 65px 0px;
-}
-
-.produtos-carousel{
-  height: 60vh;
-}
-.item-produto{
-  width: 38vw;
-  height: 38vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.img-mais-vendido{
-  position: relative;
-  width: 350px;
-  height: 350px;
-  top: 18px
-}
-
-.produto-mais-vendidos{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.info p{
-  font-size: 1.2em;
-}
-
-.info .btn-produto{
-  font-size: 1.2em;
-
-}
-
-#produto-ver-mais{
-  font-size: 1.3em;
-  width: 200px;
-  margin-top: 35px;
-}
-/*FINISHED PRODUTOS-MAIS-VENDIDOS*/
-
-
-/*VANTAGENS CONTA*/
-.titulo-itens{
-  font-size: 1.8em;
-  padding-top: 40px;
-}
-
-.content-itens{
-  font-size: 1.3em;
-  padding-top: 70px;
-}
-
-@media (min-width: 912px) and (max-width: 1024px) {
-  .titulo-itens{
-    padding-top: 55px;
+  .carousel {
+    pointer-events: none; /*desativa função js*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100vw;
+    gap: 20px;
   }
 
-  .content-itens{
-    padding-top: 80px;
-  } 
-}
-/*VANTAGENS CONTA FINISHED*/
+  .carousel-item {
+    /*width: 260px;
+  height: 348px;*/
+    width: 30vw;
+    height: 30vh;
+  }
 
-/*NOSSOS MÉDICOS*/
-.paragrafo-medicos{
-  font-size: 1.3em;
-  width: 500px;
-  margin: auto;
-}
+  /*FINISHED POR QUE usar*/
 
-.content-medicos{
- font-size: 1.3em;
- font-weight: 600;
-}
+  /*ASSUNTOS MOMENTO*/
+  .Assuntos-momento {
+    height: 75vh;
+  }
+  #titulo-post-momento {
+    padding-bottom: 60px;
+  }
 
-/*finished/*
+  .content {
+    gap: 40px;
+  }
+
+  .paramomento {
+    font-size: 1.3em;
+  }
+
+  /*FINISHED ASSUNSTOS DO MOMENTO*/
+
+  /*PRODUTOS*/
+
+  .img-whey-produto {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+
+  #whey-produto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content-produtos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-produtos h1 {
+    font-size: 2.2em;
+  }
+
+  .content-produtos p {
+    font-size: 1.3em;
+  }
+
+  .btn-produto-marketing {
+    font-size: 2em;
+  }
+
+  /*PRODUTOS FINISHED*/
+
+  /*PRODUTOS MAIS VENDIDOS*/
+
+  .vantagens-conta {
+    height: 125vh;
+  }
+
+  #titulo-vantagens-conta {
+    padding: 50px 0px 65px 0px;
+  }
+
+  .produtos-carousel {
+    height: 60vh;
+  }
+  .item-produto {
+    width: 38vw;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-mais-vendido {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    top: 18px;
+  }
+
+  .produto-mais-vendidos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info p {
+    font-size: 1.2em;
+  }
+
+  .info .btn-produto {
+    font-size: 1.2em;
+  }
+
+  #produto-ver-mais {
+    font-size: 1.3em;
+    width: 200px;
+    margin-top: 35px;
+  }
+  /*FINISHED PRODUTOS-MAIS-VENDIDOS*/
+
+  /*VANTAGENS CONTA*/
+  .titulo-itens {
+    font-size: 1.8em;
+    padding-top: 40px;
+  }
+
+  .content-itens {
+    font-size: 1.3em;
+    padding-top: 70px;
+  }
+
+  @media (min-width: 912px) and (max-width: 1024px) {
+    .titulo-itens {
+      padding-top: 55px;
+    }
+
+    .content-itens {
+      padding-top: 80px;
+    }
+  }
+  /*VANTAGENS CONTA FINISHED*/
+
+  /*NOSSOS MÉDICOS*/
+  .paragrafo-medicos {
+    font-size: 1.3em;
+    width: 500px;
+    margin: auto;
+  }
+
+  .content-medicos {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+  /*finished/*
 
 /*FAQ*/
-.frequentes-titulos{
-  font-size: 1.7em;
+  .frequentes-titulos {
+    font-size: 1.7em;
+  }
+
+  .answer {
+    font-size: 1.5em;
+  }
+
+  .line-faq {
+    height: 1px;
+    opacity: 90%;
+    margin-bottom: 10px;
+  }
+
+  #icons-frequentes {
+    font-size: 45px;
+  }
+
+  /*FINISHED*/
+
+  /*FOOTER*/
+  footer {
+    height: 40vh;
+  }
+  .titulos-footer {
+    font-size: 1.8em;
+    font-weight: 500;
+  }
+
+  .content-footer {
+    font-size: 1.3em;
+    padding-top: 10px;
+  }
+
+  #btn-footer {
+    font-size: 1.4em;
+  }
 }
 
-.answer{
-  font-size: 1.5em;
-}
+@media (min-width: 1400px) and (max-width: 1800px) {
+  #scroll-icon {
+    display: block;
+  }
 
-.line-faq{
-  height: 1px;
-  opacity: 90%;
-  margin-bottom: 10px;
-}
+  nav {
+    display: none;
+  }
 
-#icons-frequentes{
-  font-size: 45px;
-}
-
-/*FINISHED*/
-
-/*FOOTER*/
-footer{
-  height: 40vh;
-}
-.titulos-footer{
-  font-size: 1.8em;
-  font-weight: 500;
-}
-
-.content-footer{
-  font-size: 1.3em;
-  padding-top: 10px;
-}
-
-#btn-footer{
-  font-size: 1.4em;
-}
-
-}
-
-@media (min-width: 1400px) and (max-width: 1800px){
-
-  nav{ display: none;}
-
-  .desktop-menu{
+  .desktop-menu {
     position: relative;
     margin: 0;
     padding: 0;
     display: block;
-    background-color: #FFF;
+    background-color: #fff;
     max-width: 1800px;
     height: 74px;
     top: 0px;
-    filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.10));
-    font: normal 600 1.1em 'Poppins', sans-serif;
+    filter: drop-shadow(0px 20px 27px rgba(0, 0, 0, 0.1));
+    font: normal 600 1.1em "Poppins", sans-serif;
   }
 
-  .desktop-listmenu a{
+  .desktop-listmenu a {
     text-decoration: none;
     color: black;
   }
 
-  .list-conta{
+  .list-conta {
     position: absolute;
     left: 80%;
     top: 18px;
@@ -1424,44 +1411,45 @@ footer{
     justify-content: flex-end;
     align-items: center;
     gap: 50px;
-    font: normal 600 1.1em 'Poppins', sans-serif;
+    font: normal 600 1.1em "Poppins", sans-serif;
   }
 
-  .list-conta button{
-    font: normal 600 1em 'Poppins', sans-serif;
+  .list-conta button {
+    font: normal 600 1em "Poppins", sans-serif;
   }
 
-  .list-conta a{
+  .list-conta a {
     text-decoration: none;
     color: black;
   }
 
   #btn-entrar {
     width: 50px;
+    background-color: transparent;
   }
 
-  #btn-entrar a{
+  #btn-entrar a {
     color: var(--blue);
   }
-  #btn-cadastrar{
+
+  #btn-entrar a:hover{
+    color: var(--green);
+  }
+  #btn-cadastrar {
     padding: 0;
     margin: 0;
-    width: 50px;    
+    width: 50px;
+    background-color: transparent;
   }
 
-  #icon-arrow-menu{
-    font-size: 20px;
-    color: black;
-  }
-
-  .desktop-listmenu a{
+  .desktop-listmenu a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
   }
 
-  #btnlogin-desktop{
+  #btnlogin-desktop {
     width: 40px;
     height: 40px;
     padding: 20px;
@@ -1469,29 +1457,29 @@ footer{
     background-color: transparent;
   }
 
-  #logo-desktop{
+  #logo-desktop {
     position: absolute;
     top: 19px;
     left: 20px;
     font-size: 1.3em;
-    color: var(--blue)
+    color: var(--blue);
   }
 
-  #logo-desktop strong{
+  #logo-desktop strong {
     font-weight: 700;
   }
 
-  #icon-profile{
+  #icon-profile {
     font-size: 35px;
     color: var(--blue);
   }
 
-  #icon-profile:hover{
+  #icon-profile:hover {
     color: var(--green);
     transition: 1s;
   }
 
-  .img-manhome{
+  .img-manhome {
     top: 200px;
     left: 20%;
     position: relative;
@@ -1499,58 +1487,60 @@ footer{
     height: 450px;
   }
 
-  #manhome{
+  #manhome {
     width: 100%;
     height: 100%;
   }
 
-  #tituhome{
-    top: 37%;
+  #tituhome {
+    top: 38%;
     font-size: 3em;
+    color: var(--green);
   }
 
-  #paragrafohome{
-    top: 44%;
+  #paragrafohome {
+    top: 46%;
     width: 600px;
-    font-size: 2.3em;
+    font-size: 1.8em;
   }
 
+  #paragrafohome strong{
+    color: var(--green);
+  }
 
   /*POR QUE USAR*/
 
-  .carousel-container{
-    
+  .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    
   }
-  .carousel{
+  .carousel {
     pointer-events: none;
   }
 
-  .img-carousel-item{
+  .img-carousel-item {
     position: relative;
     width: 410px;
     height: 488px;
   }
 
-  .carousel-item{
+  .carousel-item {
     position: absolute;
     width: 100%;
     height: 100%;
   }
 
-  .titulosections{
-    font-size: 2.2em;
+  .titulosections {
+    font-size: 1.9em;
   }
 
-  .PorqueUsar{
+  .PorqueUsar {
     height: 100vh;
   }
 
-  .content-carousel-usar{
+  .content-carousel-usar {
     width: 1080px;
     display: flex;
     flex-direction: row;
@@ -1559,29 +1549,29 @@ footer{
     gap: 150px;
   }
 
-  .paragra-usar{
-    font: normal bold 1.4em 'Manhope', sans-serif;
+  .paragra-usar {
+    font: normal bold 1.4em "Manhope", sans-serif;
     width: 400px;
     color: var(--green);
-    font-variant: small-caps;
-  }  
+    text-align: center;
+  }
 
   /*FINISHED*/
 
   /*post-do-momento*/
 
-  .Assuntos-momento{
+  .Assuntos-momento {
     height: 100vh;
     padding-bottom: 160px;
   }
 
-  .content{
+  .content {
     margin: auto;
     width: 800px;
     gap: 35px;
   }
 
-  .content-2 img{
+  .content-2 img {
     width: 300px;
     height: 300px;
   }
@@ -1590,17 +1580,17 @@ footer{
 
   /*PRODUTOS MARKETING*/
 
-  .Produtos-marketing{
+  .Produtos-marketing {
     padding-top: 50px;
     height: 90vh;
-    background-image: url('../img/background-green.png');
+    background-image: url("../img/background-green.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top top;
     background-color: white;
   }
 
-  .img-whey-produto{
+  .img-whey-produto {
     position: relative;
     left: 54%;
     top: 40px;
@@ -1608,14 +1598,14 @@ footer{
     height: 500px;
   }
 
-  #whey-produto{
+  #whey-produto {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .content-produtos{
+  .content-produtos {
     position: relative;
     top: -30%;
     left: 5%;
@@ -1625,21 +1615,195 @@ footer{
     justify-content: center;
   }
 
-  .text-produto-marketing{
+  .text-produto-marketing {
     width: 600px;
     text-align: justify;
   }
 
+  /*PRODUTOS MAIS VENDIDOS*/
 
 
+  .titulo-carousel-produto{
+    margin: 0;
+  }
+  .carousel-container-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .produtos-carousel{
+    height: 80vh;
+  }
 
-  #iconMenu{ display: none; }
-  .login { display: none; }
-  #imgProfile { display: block; }
+  .carousel-produto{
+    pointer-events: none;
+  }
 
+  .item-produto{
+    width: 15vw;
+  }
+  .img-mais-vendido{
+    position: relative;
+    width: 230px;
+    height: 230px;
+    left: 5px;
+  }
+
+  .produto-mais-vendidos{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 80%;
+  }
+
+  .btn-produto{
+    width: 150px;
+  }
+
+  #produto-ver-mais{
+    position: absolute;
+    left: 17%;
+    padding-bottom: 40px;
+  }
+
+
+  /*VANTAGENS CONTA*/
+
+  .vantagens-conta {
+    height: 145vh;
+    background-color: var(--grey);
+  }
+  
+  .container-vantagens {
+    width: 27vw;
+    height: 120vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .item-vantagem {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+  }
+  #icons-vantagens {
+    font-size: 100px;
+    position: absolute;
+    top: 10px;
+    padding-top: 5px;
+  
+  }
+  .titulo-itens {
+    position: absolute;
+    top: 113px;
+    font: normal bold 1em "Poppins", sans-serif;
+    color: black;
+  }
+  .content-itens {
+    position: absolute;
+    top: 140px;
+    font: normal lighter 0.9rem "Manrope", sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0px 20px;
+  }
+
+  /*NOSSOS MÉDICOS*/
+
+  .medicos{
+    height: 60vh;
+  }
+
+  .medico-container{
+    height: 58vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    padding-top: 60px;
+  }
+
+  .medico-item{
+    width: 400px;
+    height: 450px;
+  }
+
+  .content-medicos{
+    position: relative;
+    top: 458px;
+    left: -250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: center;
+    gap: 430px;
+  }
+  .paragrafo-medicos{
+    font-weight: 700;
+  }
+
+  /*FAQ*/
+
+  .faq{
+    width: 700px;
+  }
+  .frequentes-titulos{
+    font-size: 1.2em;
+  }
+
+  .answer{
+    font-size: 1.1em;
+  }
+
+  /*FOOTER*/
+
+  footer{
+    position: relative;
+    padding-left: 200px;
+  }
+
+  .contato{
+    position: absolute;
+  }
+
+  #btn-footer{
+    width: 200px;
+    padding: 20px;
+  }
+  .redes{
+    position: absolute;
+    left: 60%;
+  }
+   .sobre{
+    position: absolute;
+    top: 50%;
+    width: 1245px;
+  
+   }
+
+   .sobre .content-footer{
+    text-align: justify;
+   }
+  
+   
+
+
+  #iconMenu {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  #imgProfile {
+    display: block;
+  }
 }
-
-
-
-
-
